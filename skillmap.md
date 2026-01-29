@@ -5,7 +5,7 @@
 ## interface
 * name: Learn to use MakeCode Arcade
 * description: This will teach you how to complete tutorials in Microsoft MakeCode Arcade.
-* completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/understanding-arcade-tutorials.pdf
+* completionUrl: https://github.com/mswhitt/Intro-to-Arcade-MakeCode/certificates/understanding-arcade-tutorials.pdf
 
 ### interface-activity1
 
@@ -14,15 +14,15 @@
 * description: Intro to our tutorial cards
 * tags: easy
 
-* url: https://github.com/microsoft/pxt-skillmap-sample/tutorials/interface/activity1 
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/interface/activity1.png
+* url: https://github.com/mswhitt/Intro-to-Arcade-MakeCode/tutorials/interface/activity1 
+* imageUrl: https://github.com/mswhitt/Intro-to-Arcade-MakeCode/main/img/interface/activity1.png
 
-## space
-* name: Design a Space Explorer
+## scavenger
+* name: Find All the things
 * description: Let's explore the depths of space! We'll design a vessel for space travel, add some enemies, and populate the universe with planets.
 * completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/design-a-space-explorer.pdf
 
-### space-activity1
+### scavenger-activity1
 
 * name: Ship Design
 * type: tutorial
