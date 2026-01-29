@@ -1,6 +1,6 @@
 # intro
 * name: Intro to Arcade MakeCode
-* description: Learn the Arcade MakeCodeInterface
+* description: Learn the Arcade MakeCode Interface
 
 ## interface
 * name: Learn to use MakeCode Arcade
