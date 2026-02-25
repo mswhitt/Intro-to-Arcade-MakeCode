@@ -1,4 +1,4 @@
-# Get to Know MakeCode Arcade 
+# Asteroid Blaster
 
 
 ```ghost
@@ -312,3 +312,4 @@ You've learned everything you need to know to graduate to a new tutorial.
 
 Now you can continue on and learn even more tricks for
 creating games with MakeCode Arcade!  
+
