@@ -5,7 +5,7 @@
 ## asteroid
 * name: Asteroid Blaster
 * description: Let's explore the depths of space! We'll design a vessel for space travel, add some enemies, and populate the universe with planets.
-* completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/design-a-space-explorer.pdf
+* imageUrl: https://raw.githubusercontent.com/mswhitt/Intro-to-Arcade-MakeCode/main/img/space/asteroid-blaster.gif
 
 ### asteroid-activity1
 
@@ -16,7 +16,7 @@
 * next: asteroid-activity2
 
 * url: https://github.com/mswhitt/Intro-to-Arcade-MakeCode/tutorials/space/activity1
-* imageUrl: https://raw.githubusercontent.com/mswhitt/Intro-to-Arcade-MakeCode/main/img/space/activity1.png
+* imageUrl: https://raw.githubusercontent.com/mswhitt/Intro-to-Arcade-MakeCode/main/img/space/ship.png
 
 ### asteroid-activity2
 
@@ -38,7 +38,7 @@
 * next: asteroid-activity4
 
 * url: https://github.com/mswhitt/Intro-to-Arcade-MakeCode/tutorials/space/activity3
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/space/activity3.png
+* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/space/asteroids.png
 
 ### asteroid-activity4
 
