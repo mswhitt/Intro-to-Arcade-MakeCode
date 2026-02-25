@@ -16,7 +16,7 @@
 * next: asteroid-activity2
 
 * url: https://github.com/mswhitt/Intro-to-Arcade-MakeCode/tutorials/space/activity1
-* imageUrl: https://raw.githubusercontent.com/microsoft/pxt-skillmap-sample/main/img/space/activity1.png
+* imageUrl: https://raw.githubusercontent.com/mswhitt/Intro-to-Arcade-MakeCode/main/img/space/activity1.png
 
 ### asteroid-activity2
 
