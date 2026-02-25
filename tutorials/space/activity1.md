@@ -7,7 +7,7 @@
 
 In this tutorial, you'll create your own asteroid destroying masterpiece.
 
-![Flying through space](/static/skillmap/space/space1.gif "Blasting through a starfield" )
+![Flying through space](/static/skillmap/space/asteroid-blaster.gif "Blasting through a starfield" )
 
 ## Set the scene
 **Give 'em something to look at** 🔭
@@ -52,24 +52,29 @@ flip to the gallery and choose from premade images.
 ```blocks
 effects.starField.startScreenEffect()
 // @highlight
-let mySprite = sprites.create(img`
-    . . . . . . . 9 9 . . . . . . .
-    . . . . . . 9 . . 9 . . . . . .
-    . . . . . . 9 . . 9 . . . . . .
-    . . . . . 9 . 9 9 . 9 . . . . .
-    . . . . . 9 . 9 9 . 9 . . . . .
-    . . . . 9 . 9 9 9 9 . 9 . . . .
-    . . . . 9 . 9 9 9 9 . 9 . . . .
-    . . . 9 . 9 9 9 9 9 9 . 9 . . .
-    . . . 9 . 9 . . . . 9 . 9 . . .
-    . . 9 . 9 9 . 9 9 . 9 9 . 9 . .
-    . . 9 . 9 9 . . . . 9 9 . 9 . .
-    . 9 . 9 9 9 . 9 9 9 9 9 9 . 9 .
-    . 9 . 9 9 9 . 9 9 9 9 9 9 . 9 .
-    9 . 9 9 9 9 9 9 9 9 9 9 9 9 . 9
-    9 . . . . . . . . . . . . . . 9
-    9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
-`, SpriteKind.Player)
+let myShip = sprites.create(img`
+    .....................
+    .....................
+    .........666.........
+    ........26c62........
+    .......26c1c62.......
+    ......26c1d1c62......
+    .....2661ddd1662.....
+    ....2661ddddd1662....
+    ...666cdddddddc666...
+    ..666616ddcdd616666..
+    ..6666d.1dcd1.d6666..
+    .6666..1d...d1..6666.
+    .6666.1d.....d1.6666.
+    .666..d.......d..666.
+    .6666.d1.....1d.6666.
+    .666dddd1...1dddd666.
+    .666dc..ddddd..cd.66.
+    .66..66.......66..66.
+    .66...6.......6...66.
+    ..66.............66..
+    .....................
+    `, SpriteKind.Player)
 ```
 
 ## Control your ship
@@ -81,33 +86,35 @@ let mySprite = sprites.create(img`
 🔲 Find the ``||controller:move [mySprite] with buttons ⊕||`` block 
 and drag it into the bottom of the ``||loops:on start||`` container. 
 
-** Now try moving your ship around in the simulator! **  
-Your ship will move with the joystick, arrow keys, or **W A S D** keys.  
-
+🔲 Set both vx and vy to 50
 
 
 ```blocks
 effects.starField.startScreenEffect()
-let mySprite = sprites.create(img`
-    . . . . . . . 9 9 . . . . . . .
-    . . . . . . 9 . . 9 . . . . . .
-    . . . . . . 9 . . 9 . . . . . .
-    . . . . . 9 . 9 9 . 9 . . . . .
-    . . . . . 9 . 9 9 . 9 . . . . .
-    . . . . 9 . 9 9 9 9 . 9 . . . .
-    . . . . 9 . 9 9 9 9 . 9 . . . .
-    . . . 9 . 9 9 9 9 9 9 . 9 . . .
-    . . . 9 . 9 . . . . 9 . 9 . . .
-    . . 9 . 9 9 . 9 9 . 9 9 . 9 . .
-    . . 9 . 9 9 . . . . 9 9 . 9 . .
-    . 9 . 9 9 9 . 9 9 9 9 9 9 . 9 .
-    . 9 . 9 9 9 . 9 9 9 9 9 9 . 9 .
-    9 . 9 9 9 9 9 9 9 9 9 9 9 9 . 9
-    9 . . . . . . . . . . . . . . 9
-    9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
-`, SpriteKind.Player)
-// @highlight
-controller.moveSprite(mySprite)
+let myShip = sprites.create(img`
+    .....................
+    .....................
+    .........666.........
+    ........26c62........
+    .......26c1c62.......
+    ......26c1d1c62......
+    .....2661ddd1662.....
+    ....2661ddddd1662....
+    ...666cdddddddc666...
+    ..666616ddcdd616666..
+    ..6666d.1dcd1.d6666..
+    .6666..1d...d1..6666.
+    .6666.1d.....d1.6666.
+    .666..d.......d..666.
+    .6666.d1.....1d.6666.
+    .666dddd1...1dddd666.
+    .666dc..ddddd..cd.66.
+    .66..66.......66..66.
+    .66...6.......6...66.
+    ..66.............66..
+    .....................
+    `, SpriteKind.Player)
+controller.moveSprite(myShip, 50, 50)
 ```
 
 ## Stay in screen
@@ -124,51 +131,76 @@ snap it in at the end of the program.
 
 ```blocks
 effects.starField.startScreenEffect()
-let mySprite = sprites.create(img`
-    . . . . . . . 9 9 . . . . . . .
-    . . . . . . 9 . . 9 . . . . . .
-    . . . . . . 9 . . 9 . . . . . .
-    . . . . . 9 . 9 9 . 9 . . . . .
-    . . . . . 9 . 9 9 . 9 . . . . .
-    . . . . 9 . 9 9 9 9 . 9 . . . .
-    . . . . 9 . 9 9 9 9 . 9 . . . .
-    . . . 9 . 9 9 9 9 9 9 . 9 . . .
-    . . . 9 . 9 . . . . 9 . 9 . . .
-    . . 9 . 9 9 . 9 9 . 9 9 . 9 . .
-    . . 9 . 9 9 . . . . 9 9 . 9 . .
-    . 9 . 9 9 9 . 9 9 9 9 9 9 . 9 .
-    . 9 . 9 9 9 . 9 9 9 9 9 9 . 9 .
-    9 . 9 9 9 9 9 9 9 9 9 9 9 9 . 9
-    9 . . . . . . . . . . . . . . 9
-    9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9
-`, SpriteKind.Player)
-controller.moveSprite(mySprite)
+let myShip = sprites.create(img`
+    .....................
+    .....................
+    .........666.........
+    ........26c62........
+    .......26c1c62.......
+    ......26c1d1c62......
+    .....2661ddd1662.....
+    ....2661ddddd1662....
+    ...666cdddddddc666...
+    ..666616ddcdd616666..
+    ..6666d.1dcd1.d6666..
+    .6666..1d...d1..6666.
+    .6666.1d.....d1.6666.
+    .666..d.......d..666.
+    .6666.d1.....1d.6666.
+    .666dddd1...1dddd666.
+    .666dc..ddddd..cd.66.
+    .66..66.......66..66.
+    .66...6.......6...66.
+    ..66.............66..
+    .....................
+    `, SpriteKind.Player)
+controller.moveSprite(myShip, 50, 50)
 // @highlight
-mySprite.setStayInScreen(true)
+myShip.setStayInScreen(true)
 
 ```
 
+## Setup life and score
 
-## Finale @unplugged
-
-**Great Job!**
+**Uh-oh, if you move off screen, your ship disappears!**
 
 ---
 
-Now be sure to play your game on the simulator
-before you click finish on the tutorial.  
+🔲 Use ``||info:set life to 3||`` to start the player off with some life
 
-![You in space](/static/skillmap/space/space1end.gif "Blasting through your own game" )
-
-Is everything how you want it? You can always go back and edit steps if you find out 
-that you'd like them to work differently.
+🔲 Use ``||info:set  score to 0||`` to start the player off with no score
 
 
+```blocks
+effects.starField.startScreenEffect()
+let myShip = sprites.create(img`
+    .....................
+    .....................
+    .........666.........
+    ........26c62........
+    .......26c1c62.......
+    ......26c1d1c62......
+    .....2661ddd1662.....
+    ....2661ddddd1662....
+    ...666cdddddddc666...
+    ..666616ddcdd616666..
+    ..6666d.1dcd1.d6666..
+    .6666..1d...d1..6666.
+    .6666.1d.....d1.6666.
+    .666..d.......d..666.
+    .6666.d1.....1d.6666.
+    .666dddd1...1dddd666.
+    .666dc..ddddd..cd.66.
+    .66..66.......66..66.
+    .66...6.......6...66.
+    ..66.............66..
+    .....................
+    `, SpriteKind.Player)
+controller.moveSprite(myShip, 50, 50)
+myShip.setStayInScreen(true)
+// @highlight
+info.setLife(3)
+// @highlight
+info.setScore(0)
+```
 
-## Byeeee
-
-** 🚀 That's it! 🚀**
-
-You're all set to travel the universe!
-
-Click **"Finish"** so you can publish your game to share with family and friends.
