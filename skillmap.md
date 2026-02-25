@@ -2,8 +2,8 @@
 * name: Asteroid Blaster
 * description: Create your own asteroid destroying masterpiece.
 
-## scavenger
-* name: Find All the things
+## asteroid
+* name: Asteroid Blaster
 * description: Let's explore the depths of space! We'll design a vessel for space travel, add some enemies, and populate the universe with planets.
 * completionUrl: https://microsoft.github.io/pxt-skillmap-sample/certificates/design-a-space-explorer.pdf
 
